@@ -1,0 +1,16 @@
+<p>Abderrafii goutaib 5 iir centre</p>
+<div class="container text-danger" *ngIf="errMessage">
+  <h1>{{ errMessage }}</h1>
+</div>
+<table *ngIf="products" class="table">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>PRICE</th>
+  </tr>
+  <tr *ngFor="let p of products._embedded.products">
+    <td>{{ p.id }}</td>
+    <td>{{ p.name }}</td>
+    <td>{{ p.price }}</td>
+  </tr>
+</table>
